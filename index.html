@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carter Walsh</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./public/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Navbar -->
 
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a>Education</a></li>
-            <li><a>Experience</a></li>
-            <li><a>Projects</a></li>
-            <li><a>Connect</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#connect">Connect</a></li>
         </ul>
     </nav>
+
+    <!-- Banner -->
 
     <div class="banner">
         <p class="banner-name">Carter
@@ -26,19 +32,26 @@
         <img class="headshot" src="./images/Smaller Headshot Resized.jpg" alt="profile pic"/>
     </div>
 
+    <!-- About me -->
+
     <div id="about" class="large-section">
-        <div class="row">
+        <div>
             <h3>About Me</h3>
             <p>Ambitious and aspiring software engineer with strong analytical and communication skills. Hard working, focused, and persistent team player that enjoys collaborating with others to achieve a larger goal. 500+ hours of experience in both
                 front-end and back-end web development.</p>
         </div>
     </div>
 
+    <!-- Education -->
+
     <section class="education-background">
 
         <div id="education" class="section-intro">
             <h3>Education</h3>
+            <em class="quote">"A mind that is stretched by a new experience can never go back to its old dimensions."</em>
         </div>
+
+        <div class="large-section">
 
         <div class="education-entry">
             <h5 class="blue-text">Student Software Developer</h5>
@@ -58,7 +71,7 @@
             </div>
         </div>
 
-        <div class="row education-entry">
+        <div class="education-entry">
             <div>
               <h5 class="blue-text">Java Programming Masterclass for Software Developers</h5>
               <h5 class="green-text"><strong>Udemy</strong></h5>
@@ -68,7 +81,7 @@
             </div>
         </div> 
 
-        <div class="row education-entry">
+        <div class="education-entry">
             <div>
               <h5 class="blue-text">The Complete 2021 Web Development Bootcamp</h5>
               <h5 class="green-text"><strong>Udemy</strong></h5>
@@ -80,26 +93,67 @@
             </div>
         </div> 
 
-        <div class="row education-entry">
-            <div class="col-lg-8">
+        <div class="education-entry">
+            <div>
               <h5 class="blue-text">Bacehlor of Science in Music Education</h5>
               <h5 class="green-text"><strong>Texas A&M University - Commerce</strong></h5>
               <br>
               <p>Graduated Magna Cum Laude – GPA: 3.74. Concentration in Percussion Education and Performance.</p>
             </div>
         </div>
-
+    </div>
     </section>
 
+    <section>
+        <div id="experience" class="section-intro">
+          <h3>Experience</h3>
+          <em class="quote">"Every experience in your life is being orchestrated to teach you something you need to know to move forward."</em>
+        </div>
+    
+        <div class="large-section">
+          <div class="experience-entry">
+            <div>
+              <h5 class="blue-text">Rice Middle School</h5>
+              <strong class="green-text">Associate Band Director (2019 - Present)</strong>
+              <br>
+              <br>
+              <p>Developed effective lesson plans for 6th-8th grade band students across varying levels of ability, demographics and socio-economic standards. Collaborated with team members to teach advanced musical concepts to all students. Annually
+                presented lesson plans and program visions to a team of administrators. Analyzed performance scores in order to adapt the curriculum to better suit the student's needs.</p>
+            </div>
+          </div>
+    
+          <div>
+            <div class="experience-entry">
+              <h5 class="blue-text">Genesis Drum and Bugle Corps</h5>
+              <strong class="green-text">Front Ensemble Co-Coordinator</strong>
+              <br>
+              <br>
+              <p>Communicated with organization’s Administrators across America to bring an effective show design to the participating members. Team Communications Administrator in charge of coordinating schedules and performance assignments. Educated
+                staff on how to effectively administer information to student members. Collaborated with staff members on how to create and implement effective lesson plans. Team leader responsible for transitioning all in-person auditions to remote
+                meetings conducted via Zoom.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="connect-bg footer-text">
+          <div id="connect">
+              <h3>Connect</h3>
+          </div>
 
-
-
-
-
-
-
-
+          <div class="large-section">
+            <p class="connect-message">Like what you see here? Let's connect! Follow me on LinkedIn. I'm a Web Developer based in the Dallas/Fort-Worth area that enjoys meeting new people and learning new things. 
+                Feel free to connect with me through email or by following me on
+                LinkedIn!</p>
+            <div>
+                <a role="button" href="http://www.linkedin.com/in/carter-walsh-ab8508206" type="button" target="_blank" class="quicklink">LinkedIn</a>
+                <a role="button" href="mailto:Cwalsh616@gmail.com" type="button" target="_blank" class="quicklink">Email</a>
+                <a href="#about" class="quicklink">About Me</a>
+                <a href="#education" class="quicklink">Education</a>
+                <a href="#experience" class="quicklink">Experience</a>
+            </div>
+          </div>
+      </section>
 
 </body>
 </html>
