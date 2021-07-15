@@ -28,7 +28,7 @@ p {
 }
 
 .banner {
-    background-image: url("../public/images/gray.jpg");
+    background-image: url("./images/gray.jpg");
     padding: 5rem;
 }
 
