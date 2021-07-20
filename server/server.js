@@ -23,6 +23,11 @@ app.get("/", (req, res) => {
     rollbar.warning("Endpoint doesnt exist")
 });
 
+app.get("/devmountain", (req, res) => {
+    rollbar.info("user visited DevMountain")
+    console.log("/devmountain endoint hit")
+    res.status(200).send("visited dev mountain")
+});
 app.get("/endpoint", (req, res) => {
     functionDoesNotExist();
 });
