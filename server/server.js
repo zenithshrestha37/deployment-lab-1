@@ -17,14 +17,14 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../index.html"));
-rollbar.info("html file served successfully");
+    rollbar.info("html file served successfully");
+    rollbar.error("this endpoint doesn't exist");
+    rollbar.critical("Crash while trying to reach endpoint")
+    rollbar.warning("Endpoint doesnt exist")
 });
 
 app.get("/endpoint", (req, res) => {
     functionDoesNotExist();
-    rollbar.error("this endpoint doesn't exist");
-    rollbar.critical("Crash while trying to reach endpoint")
-    rollbar.warning("Endpoint doesnt exist")
 });
 
 const port = process.env.PORT || 3000
