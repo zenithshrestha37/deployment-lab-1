@@ -1,5 +1,6 @@
 const express = require("express");
 const Rollbar = require("rollbar");
+const path = require("path");
 
 const rollbar = new Rollbar({
   accessToken: '59295395ee1148f0b0497da531809ecb',
@@ -13,11 +14,14 @@ const app = express();
 
 app.use(express.static("public"));
 
-const path = require("path");
-
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../index.html"));
     rollbar.info("html file served successfully");
+});
+
+app.get("/endpoint", (req, res) => {
+    functionDoesNotExist();
+    rollbar.error("this endpoint doesn't exist");
 });
 
 const port = process.env.PORT || 3000
