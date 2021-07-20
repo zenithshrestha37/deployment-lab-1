@@ -1,4 +1,13 @@
 const express = require("express");
+const Rollbar = require("rollbar");
+
+const rollbar = new Rollbar({
+  accessToken: '59295395ee1148f0b0497da531809ecb',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
+rollbar.log("Hello World!");
 
 const app = express();
 
@@ -8,6 +17,7 @@ const path = require("path");
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../index.html"));
+    rollbar.info("html file served successfully");
 });
 
 const port = process.env.PORT || 3000

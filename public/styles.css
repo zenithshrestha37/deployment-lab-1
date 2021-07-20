@@ -37,6 +37,7 @@ a:hover {
     background: #3377CC;
     border: 1px solid #3377CC;
     color: #EEE;
+    transform: scale(0.7);
 }
 
 h3 {
