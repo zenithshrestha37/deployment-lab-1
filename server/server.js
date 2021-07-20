@@ -11,6 +11,7 @@ const rollbar = new Rollbar({
 rollbar.log("Hello World!");
 
 const app = express();
+app.use(rollbar.errorHandler())
 
 app.use(express.static("public"));
 
@@ -22,6 +23,8 @@ rollbar.info("html file served successfully");
 app.get("/endpoint", (req, res) => {
     functionDoesNotExist();
     rollbar.error("this endpoint doesn't exist");
+    rollbar.critical("Crash while trying to reach endpoint")
+    rollbar.warning("Endpoint doesnt exist")
 });
 
 const port = process.env.PORT || 3000
